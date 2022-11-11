@@ -1,6 +1,6 @@
 from django.db import transaction
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, Doctor, Patient
+from .models import User, Doctor, Patient, Enterprise
 from django import forms
 
 class PatientSignUpForm(UserCreationForm):
@@ -33,5 +33,20 @@ class DoctorSignUpForm(UserCreationForm):
         if commit:
             user.save()
         Doctor.objects.create(user=user)
+        
+        return user
+
+class EnterpriseSignUpForm(UserCreationForm):
+
+
+    class Meta(UserCreationForm.Meta):
+        model = User
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.is_enterprise = True
+        if commit:
+            user.save()
+        Enterprise.objects.create(user=user)
         
         return user
