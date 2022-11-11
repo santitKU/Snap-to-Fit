@@ -41,7 +41,7 @@ class EnterpriseCreateView(CreateView):
         return super().form_valid(form)
 
 class PatientView(TemplateView):
-    template = "patientview.html"
+    template_name = "patientview.html"
 
 # class EnterpriseView()
 
