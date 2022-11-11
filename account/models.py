@@ -3,8 +3,10 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class User(AbstractUser):
+    is_patient = models.BooleanField('patient status', default =False)
     is_doctor = models.BooleanField('doctor status', default =False)
-    is_patient = models.BooleanField('doctor status', default =False)
+    is_enterprise = models.BooleanField('enterprise status', default =False)
+
 
 class Doctor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key = True)

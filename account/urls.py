@@ -1,6 +1,6 @@
 from django.urls import path,include
 from .views import SignUpView, PatientSignUpView, DoctorSignUpView, EnterpriseSignUpView
-# from base.views import DoctorView, PatientView
+from base.views import DoctorView, PatientView
 
 urlpatterns = [
     path('', include('django.contrib.auth.urls')),
@@ -8,7 +8,7 @@ urlpatterns = [
     path('signup/patient', PatientSignUpView.as_view(), name='patient_signup'),
     path('signup/doctor', DoctorSignUpView.as_view(), name='doctor_signup'),
     path('signup/enterprise', EnterpriseSignUpView.as_view(), name='enterprise_signup'),
-    # path('doctor', DoctorView.as_view(), name='doctor'),
-    # path('patient', PatientView.as_view(), name='patient'),
+    path('doctor', DoctorView.as_view(), name='doctor'),
+    path('patient', PatientView.as_view(), name='patient'),
 ]
 

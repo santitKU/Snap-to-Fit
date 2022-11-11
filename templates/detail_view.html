@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>The Patient's complete health data</h1>
+{% for item in vitals_list %}
+<ul>
+<h1 id = "date">{{item.date}}</h1>
+<li id= "BP">Blood Pressure : {{item.blood_pressure}}</li>
+<li id = "SL">Sugar Level : {{item.sugar_level}}</li>
+<li id = "Wht"> Weight : {{item.weight}}</li>
+<li id = "Temp"> Temperature : {{item.temperature}}</li>
+<br>
+</ul>
+{% endfor %}
+{% endblock content %}

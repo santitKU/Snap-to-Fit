@@ -1,11 +1,10 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView
-from .models import User
 from django.contrib.auth import login
-from django.shortcuts import redirect
-from .forms import PatientSignUpForm, DoctorSignUpForm, EnterpriseSignUpForm
-from django.shortcuts import redirect
 from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.views.generic import CreateView, TemplateView
+
+from .forms import DoctorSignUpForm, EnterpriseSignUpForm, PatientSignUpForm
+from .models import User
 
 
 # Create your views here.
@@ -67,6 +66,6 @@ def login_success(request):
         return redirect("http://127.0.0.1:8000/patient")
     elif request.user.is_doctor:
         return redirect("http://127.0.0.1:8000/doctor")
-    elif request.user.is_patient:
-        return redirect("http://127.0.0.1:8000/enterprise")
+    elif request.user.is_enterprise:
+        return redirect("http://127.0.0.1:8000/addRecord")
         

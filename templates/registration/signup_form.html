@@ -1,9 +1,19 @@
-{% extends "base.html" %}
+
+
+{% extends 'base.html' %}
+
+
 
 {% block content %}
-<form methon="post">
-    <input>
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-</form>
+  <div class="row">
+    <div class="col-md-8 col-sm-10 col-12">
+      <h2 class="heading-1">Sign up as a {{ user_type }}</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+    </div>
+  </div>
 {% endblock %}
