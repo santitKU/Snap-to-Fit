@@ -1,1 +1,275 @@
-<h1>Doctor View</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DashBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="sub_nav">
+
+
+            <div class="hamburger">
+
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+
+            </div>
+
+            <div class="icons">
+
+                <i class="fa fa-envelope-open"></i>
+                <i class="fa fa-bell"></i>
+                <i class="fa fa-cog"></i>
+
+            </div>
+
+
+        </div>
+        <div class="heading">
+            <h1> Welcome Back, {{user}}! </h1>
+            {% comment %} <h4> You have already completed 4 missions. You are 5 missions far for your Rs.1000 </h4> {% endcomment %}
+        </div>
+    </div>
+    <div class="first_section">
+        <div class="first_row">
+            <div class="col col-1"><br>
+                <center>
+                    <h2> Your data</h2>
+                </center>a
+                <img src='line (2).png'>
+            </div>
+
+            <div class="col col-2">
+
+                <div class="snippet snippet-1">
+                    <center>
+                        <h2>Your data</h2>
+                    </center>
+                    <h4>1......</h4>
+                </div>
+                <div class="snippet snippet-2">
+
+                    <center>
+                        <h2>Your data</h2>
+                    </center>
+                    <h4>.......</h4>
+
+                </div>
+                <div class="snippet snippet-3">
+
+                    <center>
+                        <h2>Your data</h2>
+                    </center>
+                    <h4>.....</h4>
+                    <h6>......</h6>
+
+                </div>
+                <div class="snippet snippet-4">
+
+                    <center>
+                        <h2>API (recommended)</h2>
+                    </center>
+                    <h4>
+                        <50 </h4>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <nav class="nav">
+        <div class="BRAND">
+            SNAPToFit
+        </div>
+        <div class="image">
+            <img src="Harke.jpg">
+            <p class="name"> {{user}} </p>
+            <p class="desc"> {{age}} </p>
+        </div>
+
+        <div class="nav-elements">
+            <center>
+                <ul class="nav-links">
+                    <li> <a href=" ">HOME</a>
+                        <li> <a href=" ">Statistics</a>
+                            <li> <a href="index.html">Log Out</a>
+                </ul>
+            </center>
+        </div>
+    </nav>
+
+
+    <div class="second_section">
+        <div class="second_row">
+
+            <div class="col col-1">
+
+                <image src="line (1).png">
+                    <center>
+                        <h2> Comparison with other cities</h2>
+                    </center>
+
+            </div>
+
+            <div class="col col-2">
+
+                <H2> Tree Plantation Statistics: last one year </h2>
+
+                <div class="counter">
+                    <div class="numb">
+                        0%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <div class="third_section">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139267.27417793058!2d87.21413532502552!3d26.457293314101367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef744704331cc5%3A0x6d9a85e45c54b3fc!2sBiratnagar%2056613!5e0!3m2!1sen!2snp!4v1624872111492!5m2!1sen!2snp"
+                width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+    </center>
+    <div class="fourth_section">
+        <div class="fourth_row">
+
+            <div class="col col-1">
+                <br>
+                <center>
+                    <h2> Leaderboards </h2>
+                </center>
+                <br>
+                <div class="table">
+                    <table class="ds-table">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>I.D.</th>
+                                <th class="vanish">Missions Completed</th>
+                                <th class="vanish vanish_1 ">Total Points Earned</th>
+                                <th class="vanish vanish_1 ">Level</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>#ABC</td>
+                                <td class="vanish">5</td>
+                                <td class="vanish vanish_1 ">100</td>
+                                <td class="vanish vanish_1 ">Bronze</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <footer>
+        <center>
+            <p>&copy; SNAPToFit. All rights reserved. Designed By Sphinx. </p>
+        </center>
+    </footer>
+
+
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script  async defer>
+        const h = document.querySelector(".hamburger");
+        const n = document.querySelector(".nav");
+
+        h.addEventListener("click", () => {
+            n.classList.toggle("open");
+        })
+
+
+        const numb = document.querySelector(".numb");
+        let counter = 0;
+        setInterval(() => {
+            if (counter == 60) {
+                clearInterval();
+            } else {
+                counter += 1;
+                numb.textContent = counter + "%";
+            }
+        }, 80);
+    </script>
+</body>
+
+</html>
