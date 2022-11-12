@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,6 +16,10 @@
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
 
 </head>
 
@@ -52,41 +58,43 @@
                 <center>
                     <h2> Your data</h2>
                 </center>
-                <img src='line (2).png'>
+                <canvas id="line-chart" width="800" height="450"></canvas>
             </div>
 
             <div class="col col-2">
 
                 <div class="snippet snippet-1">
                     <center>
-                        <h2>Your data</h2>
+                        <h2>Height</h2>
+                        <h4>{{height}}</h4>
+
                     </center>
-                    <h4>1......</h4>
+                    <h4></h4>
                 </div>
                 <div class="snippet snippet-2">
 
                     <center>
-                        <h2>Your data</h2>
+                        <h2>Weight</h2>
                     </center>
-                    <h4>.......</h4>
+
+                    <h4>{{weight}}</h4>
+
 
                 </div>
                 <div class="snippet snippet-3">
 
                     <center>
-                        <h2>Your data</h2>
+                        <h2>Age</h2>
                     </center>
-                    <h4>.....</h4>
-                    <h6>......</h6>
+                    <h4>{{age}}</h4>
 
                 </div>
                 <div class="snippet snippet-4">
 
                     <center>
-                        <h2>API (recommended)</h2>
+                        <h2>Gender</h2> 
                     </center>
-                    <h4>
-                        <50 </h4>
+                    <h4>{{gender}}</h4>
 
                 </div>
             </div>
@@ -109,7 +117,7 @@
                 <ul class="nav-links">
                     <li> <a href=" ">HOME</a>
                         <li> <a href=" ">Statistics</a>
-                            <li> <a href="index.html">Log Out</a>
+                            <li> <a href="{% url 'logout'%}">Log Out</a>
                 </ul>
             </center>
         </div>
@@ -121,20 +129,22 @@
 
             <div class="col col-1">
 
-                <image src="line (1).png">
                     <center>
-                        <h2> Comparison with other cities</h2>
+                        <h2> Diastolic</h2>
                     </center>
+                    <center><p style = "font-size:10px; color:red;">{{msg}}</p></center>
+                        <canvas id="scatter-chart" width="800" height="450"></canvas>
+                        
 
             </div>
 
             <div class="col col-2">
 
-                <H2> Tree Plantation Statistics: last one year </h2>
+                <H2> Heart Rate </h2>
 
                 <div class="counter">
                     <div class="numb">
-                        0%
+                        {{heartrate}}
                     </div>
                 </div>
             </div>
@@ -149,94 +159,6 @@
 
         </div>
     </center>
-    <div class="fourth_section">
-        <div class="fourth_row">
-
-            <div class="col col-1">
-                <br>
-                <center>
-                    <h2> Leaderboards </h2>
-                </center>
-                <br>
-                <div class="table">
-                    <table class="ds-table">
-                        <thead>
-                            <tr>
-                                <th>S.N.</th>
-                                <th>I.D.</th>
-                                <th class="vanish">Missions Completed</th>
-                                <th class="vanish vanish_1 ">Total Points Earned</th>
-                                <th class="vanish vanish_1 ">Level</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>4.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>5.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>6.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>7.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                            <tr>
-                                <td>8.</td>
-                                <td>#ABC</td>
-                                <td class="vanish">5</td>
-                                <td class="vanish vanish_1 ">100</td>
-                                <td class="vanish vanish_1 ">Bronze</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
     <br>
     <footer>
         <center>
@@ -249,6 +171,63 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+    <script>
+         new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+          labels: [{{date|safe}}],
+          datasets: [{ 
+              data: {{ systolic|safe }},
+              label: "systolic",
+              borderColor: "#3e95cd",
+              fill: false
+            },
+            { 
+              data: {{ diastolic|safe }},
+              label: "diastolic",
+              borderColor: "#00ff00",
+              fill: false
+            } 
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Systolic vs Diastolic Blood pressure'
+          }
+        }
+      });
+
+
+        new Chart(document.getElementById("scatter-chart"), {
+        type: 'line',
+        data: {
+          labels: [{{date|safe}}],
+          datasets: [{ 
+              data: {{ diastolic|safe }},
+              borderColor: "#3e95cd",
+              fill: false
+            },
+            /*
+            { 
+              data: {{ predict|safe }},
+              label: "diastolicpredicted",
+              borderColor: "#ff0000",
+              fill: false
+            } */
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Diastolic Blood pressure'
+          }
+        }
+      });
+
+    </script>
+
 
     <script  async defer>
         const h = document.querySelector(".hamburger");
@@ -266,10 +245,11 @@
                 clearInterval();
             } else {
                 counter += 1;
-                numb.textContent = counter + "%";
+                numb.textContent = counter + " avgbpm/day";
             }
         }, 80);
     </script>
 </body>
 
 </html>
+{% endblock content %}

@@ -66,6 +66,6 @@ def login_success(request):
         return redirect("http://127.0.0.1:8000/patient")
     elif request.user.is_doctor:
         return redirect("http://127.0.0.1:8000/doctor")
-    elif request.user.is_enterprise:
-        return redirect("http://127.0.0.1:8000/addRecord")
+    # elif request.user.is_enterprise:
+    #     return redirect("http://127.0.0.1:8000/")
         
