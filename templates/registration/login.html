@@ -57,8 +57,11 @@
                     <input type="submit" class="btn" value="Login">
                 </div>
                 <p> Don't have an account? <a href="signup.html"><span style=" color:#F17720;">sign up</span></a></p> -->
+            <form method="post" novalidate>
                 {% csrf_token %}
-                {{form.as_p}}
+
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Log in</button>
             </form>
 </div>
 
