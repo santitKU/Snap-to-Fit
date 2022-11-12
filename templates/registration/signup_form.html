@@ -1,19 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
 
+<!DOCTYPE html>
 
-{% extends 'base.html' %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
+<html>
 
-
-
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SnapToFit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=PK1YR4_S-xGwFB9aVRhaePAsZ8zYEZHidtYi70JJlm6PqCa7ZhAOuuvuNKUfwBQQ4gQrN14NMhZ8D-QlOBcTxookOFOGZVe36-B5HQ-4Q78qdnj2PgSw5-1GSOmrxWG6ZaNBD0qDE2IrbCHcL-9squ1d_M6ukTuZVKlKPi-1h8JmwHqa_Pv4GmOwXtfYTqhRRcKE11rzdoRsIh5fNFlsakMDXpSqX519_8YlfOqj2-vjpsfB0QYVQdMgDBgxSO91MF_pf0_WTopUNpPZVimmbzVm5HGk-7oKBmxfbUVl6ycc0J8J-lYEgl2aPAfrnPgXYDQNv_4cL6pMTZKZgzL-j_BJDOC9fJ31Il4uBpLUK86HXPkmBDrikItgx0ZNtP2G" charset="UTF-8"></script><script src="https://kit.fontawesome.com/ac298c0bbf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
 {% block content %}
-  <div class="row">
-    <div class="col-md-8 col-sm-10 col-12">
-      <h2 class="heading-1">Sign up as a {{ user_type }}</h2>
-      <form method="post" novalidate>
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}">
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-success">Sign up</button>
-      </form>
-    </div>
-  </div>
-{% endblock %}
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header class="container main">
+        <div class="container left">
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-success">Sign up</button>
+              </form>
+            <!-- <form action="" class="login"> -->
+                <!-- <div class="logo">
+                    <h1>
+                        <Span style="color: #0474BA;">SNAP</Span>ToFit</h1>
+                </div>
+                <div class="social">
+                    <button>
+                        <i class="fa-brands fa-google"></i> <span class="social_text">Google</span>
+                    </button>
+                    <button>
+                        <i class="fa-brands fa-facebook"></i><span class="social_text">Facebook</span>
+                    </button>
+                </div>
+                <h2>Sign<span style="color:#0474BA;">Up</span></h2>
+                <div class="text userName">
+                    <input type="text" name="username" class="field" id="username" placeholder="Username" />
+                </div>
+
+                <div class="text passWord">
+                    <input type="password" name="password" class="field" id="password" placeholder="password" />
+                </div>
+
+                <div class="text passWord">
+                    <input type="email" name="email" class="field" id="email" placeholder="Email" />
+                </div>
+
+                
+                <div class="button">
+                    <input type="submit" class="btn" value="SignUp">
+                </div> -->
+                <!-- <p> Already have an account? <a href="home.html"><span style=" color:#F17720;">Login</span></a></p> -->
+
+            <!-- </form> -->
+
+
+
+        </div>
+        <div class="container right">
+            <div class="sm-nav">
+                <ul class="sm">
+                    <li class="items">
+                        <a href="#" class="sm-link">Blogs</a>
+                    </li>
+                    <li class="items">
+                        <a href="#" class="sm-link">Developer's Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="image">
+
+            </div>
+
+        </div>
+    </header>
+    <script src="" async defer></script>
+</body>
+{% endblock content %}
+</html>
