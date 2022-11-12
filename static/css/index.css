@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0;
     margin: 0;
@@ -155,7 +157,7 @@ form>h2 {
 .right>.image {
     width: 100%;
     height: 50vh;
-    background-image: url("E:/SnapTofit/bg.svg");
+    background-image: url("../media/doc.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
