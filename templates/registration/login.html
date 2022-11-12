@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
+{% block content %}
+<div class = "container main">
+<div class = "container left">
+    {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+            <p{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
+          {% endfor %}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      {% endif %}
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <h2>Log in</h2>
+    
+    <header class="container main">
+        <!-- <div class="container left">
+
+            <form action="" class="login">
+                <div class="logo">
+                    <h1>
+                        <Span style="color: #0474BA;">SNAP</Span>ToFit</h1>
+                </div>
+                <div class="social">
+                    <button>
+                        <i class="fa-brands fa-google"></i> <span class="social_text">Google</span>
+                    </button>
+                    <button>
+                        <i class="fa-brands fa-facebook"></i><span class="social_text">Facebook</span>
+                    </button>
+                </div>
+                <h2>Log<span style="color:#0474BA;">In</span></h2>
+                <div class="text userName">
+                    <input type="text" name="username" class="field" id="username" placeholder="Username" />
+                </div>
+
+                <div class="text passWord">
+                    <input type="password" name="password" class="field" id="password" placeholder="password" />
+                </div>
+
+                <div class="checkbox">
+                    <div class="remem">
+                        <input type="checkbox" name="" class="rememberme">
+                        <label for="rememberme">Remember Me</label>
+                    </div>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" value="Login">
+                </div>
+                <p> Don't have an account? <a href="signup.html"><span style=" color:#F17720;">sign up</span></a></p> -->
+                {% csrf_token %}
+                {{form.as_p}}
+            </form>
+</div>
+
+
+        <div class="container right">
+            <div class="sm-nav">
+                <ul class="sm">
+                    <li class="items">
+                        <a href="#" class="sm-link">Blogs</a>
+                    </li>
+                    <li class="items">
+                        <a href="#" class="sm-link">Developer's Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="image">
+
+            </div>
+
+        </div>
+ 
+</div>
+
+{% endblock content %}
